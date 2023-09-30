@@ -57,5 +57,9 @@ To use our custom Jellyfin Nuclei template, follow the steps below:
 5. Clone this repository and enter the 'September' directory.
 6. In a command prompt, run: ```nuclei -u http://localhost:8096/ -t ./jellyfin-default-login.yaml ```
 
-If executed correctly, the result output should look something like this: 
+If executed correctly, the result output should look something like this:<br />
+<br />
+
 ![](./image.png)
+<br />
+As you can see the template was able to discover default credentials `admin:admin` and `jellyfin:password`
