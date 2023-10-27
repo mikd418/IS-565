@@ -1,0 +1,49 @@
+id: couchdb-default-login
+
+  info:
+    name: Basic Credentials Search
+    author: mikd418
+    severity: medium
+    description: Search for basic credentials in CouchDB
+    classification:
+      cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
+      cvss-score: 6.5
+      cwe-id: CWE-798
+    tags: credential-search, couchdb, default-login
+    metadata:
+      max-request: 3
+
+  http:
+    - raw:
+        - |-
+          POST /Users/authenticatebyname HTTP/1.1
+          Host: {{Hostname}}
+          Content-Type: application/json
+          X-Emby-Authorization: MediaBrowser Client="CloudDB Web", Device="Browser", DeviceID="DeviceID", Version="Version"
+  
+          {"Username":"{{username}}","Password":"{{password}"}
+  
+      payloads:
+        username:
+          - admin
+          - administrator
+          - root
+          - user
+          - test
+          - guest
+          - couchdb
+        password:
+          - admin
+          - root
+          - user
+          - password
+          - test
+          - couchdb
+
+      attack: clusterbomb
+  
+      matchers-condition: or
+      matchers:
+        - type: status
+          status:
+            - 200
