@@ -63,4 +63,4 @@ If executed correctly, the result output should look something like this:<br />
 ![](./image.png)
 <br />
 <br />
-As you can see the template was able to discover default credentials `admin:admin` and `Emby:password`
+As you can see the template was able to discover default credentials `admin:admin`
