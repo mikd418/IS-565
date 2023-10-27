@@ -39,6 +39,7 @@ id: couchdb-default-login
           - password
           - test
           - couchdb
+          - youradminpassword
 
       attack: clusterbomb
   
