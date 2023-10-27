@@ -35,27 +35,27 @@ nuclei -u <target> -t <path_to_template>
 
 Installing Nuclei will install all nuclei templates by default. You can specify specific templates or directories of templates to use. Nuclei will use all templates if none are specified.
 
-## CouchDB
-### What is CouchDB
+## Emby
+### What is Emby
 
-CouchDB is an open-source NoSQL database system known for its schema-free document storage and distributed architecture. It allows users to store and retrieve data in a flexible, JSON-like format, making it suitable for web and mobile applications. CouchDB's multi-node and replication capabilities enable high availability and data synchronization across distributed environments.
+Emby is an open-source NoSQL database system known for its schema-free document storage and distributed architecture. It allows users to store and retrieve data in a flexible, JSON-like format, making it suitable for web and mobile applications. Emby's multi-node and replication capabilities enable high availability and data synchronization across distributed environments.
 
-### Installing CouchDB
+### Installing Emby
 
-CloudDB can be easily installed on multiple operating systems or run in a containerized environment. Installation instructions can be found here:https://docs.couchdb.org/en/stable/install/index.html
+CloudDB can be easily installed on multiple operating systems or run in a containerized environment. Installation instructions can be found here:https://docs.Emby.org/en/stable/install/index.html
 
 ## Proof of concept 
 
-### Using CouchDB Nuclei Template
+### Using Emby Nuclei Template
 
-To use our custom CouchDB Nuclei template, follow the steps below:
+To use our custom Emby Nuclei template, follow the steps below:
 
 1. Make sure that you have Nuclei installed on your host.
-2. Start the CouchDB service. By default, CouchDB will run on port 5984.
-3. Navigate to your CouchDB server by visiting http://localhost:5984/ in your browser
-4. Setup CouchDB with weak credentials. Ex: ```admin:admin```
+2. Start the Emby service. By default, Jellyfin will run on port 8096.
+3. Navigate to your Emby server by visiting http://localhost:8096/ in your browser
+4. Setup Emby with weak credentials. Ex: ```admin:admin```
 5. Clone this repository and enter the 'October' directory.
-6. In a command prompt, run: ```nuclei -u http://localhost:5984/ -t ./couchdb-default-login.yaml ```
+6. In a command prompt, run: ```nuclei -u http://localhost:8096/ -t ./emby-default-login.yaml ```
 
 If executed correctly, the result output should look something like this:<br />
 <br />
@@ -63,4 +63,4 @@ If executed correctly, the result output should look something like this:<br />
 ![](./image.png)
 <br />
 <br />
-As you can see the template was able to discover default credentials `admin:admin` and `couchdb:password`
+As you can see the template was able to discover default credentials `admin:admin` and `Emby:password`

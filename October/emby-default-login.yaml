@@ -1,15 +1,15 @@
-id: couchdb-default-login
+id: emby-default-login
 
   info:
     name: Basic Credentials Search
     author: mikd418
     severity: medium
-    description: Search for basic credentials in CouchDB
+    description: Search for basic credentials in Emby
     classification:
       cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
       cvss-score: 6.5
       cwe-id: CWE-798
-    tags: credential-search, couchdb, default-login
+    tags: credential-search, emby, default-login
     metadata:
       max-request: 3
 
@@ -19,7 +19,7 @@ id: couchdb-default-login
           POST /Users/authenticatebyname HTTP/1.1
           Host: {{Hostname}}
           Content-Type: application/json
-          X-Emby-Authorization: MediaBrowser Client="CouchDB Web", Device="Browser", DeviceID="DeviceID", Version="Version"
+          X-Emby-Authorization: MediaBrowser Client="Emby Web", Device="Browser", DeviceID="DeviceID", Version="Version"
   
           {"Username":"{{username}}","Password":"{{password}"}
   
@@ -31,15 +31,13 @@ id: couchdb-default-login
           - user
           - test
           - guest
-          - couchdb
+          - emby
         password:
           - admin
           - root
           - user
           - password
           - test
-          - couchdb
-          - youradminpassword
 
       attack: clusterbomb
   
