@@ -19,7 +19,7 @@ id: couchdb-default-login
           POST /Users/authenticatebyname HTTP/1.1
           Host: {{Hostname}}
           Content-Type: application/json
-          X-Emby-Authorization: MediaBrowser Client="CloudDB Web", Device="Browser", DeviceID="DeviceID", Version="Version"
+          X-Emby-Authorization: MediaBrowser Client="CouchDB Web", Device="Browser", DeviceID="DeviceID", Version="Version"
   
           {"Username":"{{username}}","Password":"{{password}"}
   
