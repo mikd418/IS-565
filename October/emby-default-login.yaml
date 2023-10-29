@@ -1,48 +1,38 @@
-id: emby-default-login
+id: emby-weak-credentials
 
   info:
-    name: Basic Credentials Search
+    name: Emby Web Weak Credentials
     author: mikd418
-    severity: medium
+    severity: high
     description: Search for basic credentials in Emby
-    classification:
-      cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
-      cvss-score: 6.5
-      cwe-id: CWE-798
-    tags: credential-search, emby, default-login
-    metadata:
-      max-request: 3
+    tags: emby, credentials
 
-  http:
-    - raw:
-        - |-
-          POST /Users/authenticatebyname HTTP/1.1
-          Host: {{Hostname}}
-          Content-Type: application/json
-          X-Emby-Authorization: MediaBrowser Client="Emby Web", Device="Browser", DeviceID="DeviceID", Version="Version"
-  
-          {"Username":"{{username}}","Password":"{{password}"}
-  
-      payloads:
-        username:
-          - admin
-          - administrator
-          - root
-          - user
-          - test
-          - guest
-          - emby
-        password:
-          - admin
-          - root
-          - user
-          - password
-          - test
+  requests:
+    - method: POST
+      path: "/emby/Users/authenticatebyname"
+    headers:
+      Content-Type: application/json
+    body: |-
+      {
+        "Username": "{{username}}",
+        "Pw": "{{password}}"
+      }
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
 
-      attack: clusterbomb
-  
-      matchers-condition: or
-      matchers:
-        - type: status
-          status:
-            - 200
+attacks:
+  username:
+    - admin
+    - administrator
+    - test
+    - user
+  password:
+    - admin
+    - password
+    - emby
+    - yourpassword
+
+
