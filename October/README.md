@@ -42,7 +42,7 @@ Emby is an open-source NoSQL database system known for its schema-free document 
 
 ### Installing Emby
 
-CloudDB can be easily installed on multiple operating systems or run in a containerized environment. Installation instructions can be found here:https://docs.Emby.org/en/stable/install/index.html
+Emby can be easily installed on multiple operating systems or run in a containerized environment. Installation instructions can be found here:https://docs.Emby.org/en/stable/install/index.html
 
 ## Proof of concept 
 
@@ -51,7 +51,7 @@ CloudDB can be easily installed on multiple operating systems or run in a contai
 To use our custom Emby Nuclei template, follow the steps below:
 
 1. Make sure that you have Nuclei installed on your host.
-2. Start the Emby service. By default, Jellyfin will run on port 8096.
+2. Start the Emby service. By default, Emby will run on port 8096.
 3. Navigate to your Emby server by visiting http://localhost:8096/ in your browser
 4. Setup Emby with weak credentials. Ex: ```admin:admin```
 5. Clone this repository and enter the 'October' directory.
