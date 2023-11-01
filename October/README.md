@@ -42,7 +42,7 @@ Emby is an open-source NoSQL database system known for its schema-free document 
 
 ### Installing Emby
 
-Emby can be easily installed on multiple operating systems or run in a containerized environment. Installation instructions can be found here:https://docs.Emby.org/en/stable/install/index.html
+Emby can be easily installed on multiple operating systems or run in a containerized environment. Installation instructions can be found here: https://emby.media/download.html
 
 ## Proof of concept 
 
