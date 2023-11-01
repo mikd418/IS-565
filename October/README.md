@@ -60,7 +60,7 @@ To use our custom Emby Nuclei template, follow the steps below:
 If executed correctly, the result output should look something like this:<br />
 <br />
 
-![](./image.png)
+![](./october_creation.png)
 <br />
 <br />
-As you can see the template was able to discover default credentials `admin:admin`
+As you can see the template was able to discover default credentials `root:root`
